@@ -1,0 +1,27 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:f="http://java.sun.com/jsf/core"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                template="/WEB-INF/template.xhtml">
+
+    <ui:define name="content">
+        <div class="ui-g">
+            <div class="ui-g-12">
+                <div class="card">
+                    <p:panel header="MavenJSfCdiPrimefacesUltima">
+                        <h:form>
+                            <p:inputText id="nome" value="#{pessoaBean.pessoa.nome}" placeholder="Nome"></p:inputText>
+                            <p:inputText id="idade" value="#{pessoaBean.pessoa.idade}" placeholder="Idade"></p:inputText>
+                            <br/>
+                            <br/>
+                            <p:commandButton value="Exibir Pessoa" action="#{pessoaBean.exibirPessoa()}" process="@this" update="nome idade"></p:commandButton>
+                        </h:form>
+                    </p:panel>
+                </div>
+            </div>
+        </div>
+
+    </ui:define>
+
+</ui:composition>
