@@ -1,0 +1,57 @@
+<ui:composition template="/WEB-INF/template.xhtml"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+	<ui:define name="title">Cadastro de Questões</ui:define>
+		
+	<ui:define name="content">
+		<div id="all">
+			<h:form>
+<!-- 				<h3>Cadastro de Questões</h3> -->
+				<p:panelGrid columns="2" style="margin: 0 auto">
+				<f:facet name="header">Cadastro de Questões</f:facet>
+				
+					<p:outputLabel value="Enunciado" for="enunciado"/>
+					<p:inputTextarea cols="30" rows="10" id="enunciado"/>
+					
+					<p:outputLabel value="Tipo" for="tipo" />
+						<p:selectOneRadio id="tipo">
+							<f:selectItem itemLabel="Múltipla Escolha" itemValue="Multipla Escolha"/>
+							<f:selectItem itemLabel="Discursiva" itemValue="Discursiva"/>
+							<f:selectItems />
+						</p:selectOneRadio> 
+						
+					<p:outputLabel value="Ilustração"  />
+					<p:fileUpload mode="simple" skinSimple="true" label="Selecione o arquivo" id="ilustracao"/>
+					
+					<p:outputLabel value="Matéria" for="materia"/>
+					<p:selectOneMenu id="materia">
+						<f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+						<f:selectItems />
+					</p:selectOneMenu>
+					
+					<p:outputLabel value="Tema" for="tema"/>
+					<p:selectOneMenu id="tema">
+						<f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+						<f:selectItems />
+					</p:selectOneMenu>
+					
+					<p:outputLabel value="Assunto" for="assunto"/>
+					<p:selectOneMenu id="assunto">
+						<f:selectItem itemLabel="Selecione" noSelectionOption="true"/>
+						<f:selectItems />
+					</p:selectOneMenu>
+					
+					<p:outputLabel />
+					<p:commandButton value="Cadastrar" icon="fa fa-save"/>
+				
+				</p:panelGrid>
+			</h:form>
+		</div>
+	</ui:define>
+
+</ui:composition>
+

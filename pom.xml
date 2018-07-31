@@ -18,6 +18,22 @@
 			<artifactId>javax.faces</artifactId>
 			<version>2.1.17</version>
 		</dependency>
+		
+		<!-- Servelet -->
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-web-api</artifactId>
+            <version>7.0</version>
+            <type>jar</type>
+        </dependency>
+		
+		  <!-- Mojarra (implementacao do JSF) -->
+        <dependency> 
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.faces</artifactId>
+            <version>2.2.14</version>
+            <scope>compile</scope>
+        </dependency>
 
 		<!-- Primefaces -->
 		<dependency>
